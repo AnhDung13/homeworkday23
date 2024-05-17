@@ -1,20 +1,20 @@
 // bài 1
 
-var n = 1;
+var n = 13;
 if (n <= 1 || n % 1 !== 0) {
   document.write("<p>Bài 1: mời nhập lại n</p>");
 } else {
   for (var i = n; i > 0; i++) {
-    var isPrime = true;
+    var primeNumber = true;
     for (var j = 2; j <= Math.sqrt(i); j++) {
       if (i % j === 0) {
-        isPrime = false;
+        primeNumber = false;
         break;
       }
     }
-    var str = i.toString();
-    var check = str.split("").reverse().join("");
-    if (isPrime && str === check) {
+    var toStr = i.toString();
+    var check = toStr.split("").reverse().join("");
+    if (primeNumber && toStr === check) {
       document.write(
         "<p>Bài 1: số nguyên tố đối xứng nhỏ nhất lớn hơn hoặc bằng <span>" +
           n +
@@ -54,7 +54,7 @@ document.write(
 );
 
 // bài 3
-// ý tưởng: số nguyên dương nhỏ nhất là n = 1
+// ý tưởng: mặc định số nguyên dương nhỏ nhất là n = 1
 // tạo 1 hàm kiểm tra n có trong mảng hay không
 // nếu có thì gọi lại hàm với n+=1 nếu không thì in ra n
 var nums = [7, 8, 9, 11, 12];
